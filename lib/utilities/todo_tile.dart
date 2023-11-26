@@ -9,7 +9,16 @@ class TodoTile extends StatelessWidget {
       padding: EdgeInsets.all(25.0),
       child: Container(
         padding: EdgeInsets.all(25),
-        child: Text("Make tutorial"),
+        child: Row(
+          children: [
+            // Checkbox
+            Checkbox(value: value, onChanged: onChanged)
+
+            // Task Name
+            Text("Make tutorial"),
+
+          ],
+        ),
         decoration: BoxDecoration(
           color: Colors.deepPurple[400],
           borderRadius: BorderRadius.circular(14),
