@@ -21,10 +21,10 @@ class TodoTile extends StatelessWidget {
         child: Row(
           children: [
             // Checkbox
-            Checkbox(value: value, onChanged: onChanged)
+            Checkbox(value: taskCompleted, onChanged: onChanged),
 
             // Task Name
-            Text("Make tutorial"),
+            Text(taskName),
 
           ],
         ),
