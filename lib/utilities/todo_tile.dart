@@ -5,6 +5,16 @@ class TodoTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Padding(
+      padding: EdgeInsets.all(25.0),
+      child: Container(
+        padding: EdgeInsets.all(25),
+        child: Text("Make tutorial"),
+        decoration: BoxDecoration(
+          color: Colors.deepPurple[400],
+          borderRadius: BorderRadius.circular(14),
+        ),
+      ),
+    );
   }
 }
