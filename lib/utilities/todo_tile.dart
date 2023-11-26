@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class TodoTile extends StatelessWidget {
+  final String taskName;
+  final bool taskCompleted;
+  Function(bool?)? onChanged;
+  
   const TodoTile({super.key});
 
   @override
