@@ -28,8 +28,12 @@ class TodoTile extends StatelessWidget {
               ),
 
             // Task Name
-            Text(taskName),
-
+            Text(
+              taskName,
+              style: TextStyle(
+                decoration: taskCompleted ? TextDecoration.lineThrough: TextDecoration.none,
+              ),
+              ),
           ],
         ),
         decoration: BoxDecoration(
