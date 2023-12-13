@@ -52,7 +52,13 @@ class _DigitalClockState extends State<DigitalClock> {
                       child: Text(
                         DateFormat('HH').format(_dateTime), // Show only hours
                         style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: Colors.white, fontSize: 150),
-
+                          Padding(
+                          padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
+                          child: Text(
+                            DateFormat('a').format(_dateTime), // Show AM/PM
+                            style: Theme.of(context).textTheme.subtitle1?.copyWith(color: Colors.white, fontSize: 24),
+                            ),
+                            ),
                       ),
                     ),
                   ],
