@@ -44,21 +44,24 @@ class _DigitalClockState extends State<DigitalClock> {
                 decoration: BoxDecoration(
                   color:  Color.fromRGBO(217, 217, 217, 200), 
                   borderRadius: BorderRadius.circular(15)),
-                child: Row(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.only(top: 70.0, bottom: 70),
+                      padding: const EdgeInsets.only(top: 70.0, bottom: 45),
                       child: Text(
-                        DateFormat('HH').format(_dateTime), // Show only hours
+                        DateFormat('hh').format(_dateTime), // Show only hours
                         style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: Colors.white, fontSize: 150),
-                          Padding(
-                          padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
-                          child: Text(
-                            DateFormat('a').format(_dateTime), // Show AM/PM
-                            style: Theme.of(context).textTheme.subtitle1?.copyWith(color: Colors.white, fontSize: 24),
-                            ),
-                            ),
+                      ),
+                    ),
+                    Container(
+                      alignment: Alignment.bottomLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15.0, bottom: 10.0),
+                        child: Text(
+                          DateFormat('a').format(_dateTime), // Show AM/PM
+                          style: Theme.of(context).textTheme.subtitle1?.copyWith(color: Colors.white, fontSize: 24),
+                        ),
                       ),
                     ),
                   ],
