@@ -39,9 +39,11 @@ class _DigitalClockState extends State<DigitalClock> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(left: 30.0, right: 30),
+              padding: const EdgeInsets.only(left: 40.0, right: 40),
               child: Container(
-                decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(30)),
+                decoration: BoxDecoration(
+                  color:  Color.fromRGBO(217, 217, 217, 200), 
+                  borderRadius: BorderRadius.circular(15)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -59,16 +61,18 @@ class _DigitalClockState extends State<DigitalClock> {
             ),
             SizedBox(height: 8),
             Padding(
-              padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+              padding: const EdgeInsets.only(left: 40.0, right: 40.0),
               child: Container(
-                decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(30)),
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(217, 217, 217, 200), 
+                  borderRadius: BorderRadius.circular(15)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start, // Align to the left
                   crossAxisAlignment: CrossAxisAlignment.start, // Align day of the week to the left
                   children: <Widget>[ // Add space between day and minutes
                     Center(
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 70.0, bottom: 70),
+                        padding: const EdgeInsets.only(top: 70.0, bottom: 45),
                         child: Text(
                           DateFormat('mm').format(_dateTime), // Show only minutes
                           style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: Colors.white, fontSize: 150),
@@ -81,20 +85,26 @@ class _DigitalClockState extends State<DigitalClock> {
                         Container(
                           alignment: Alignment.bottomLeft,
                           child: Padding(
-                            padding: const EdgeInsets.only(left: 10.0),
+                            padding: const EdgeInsets.only(left: 15.0, bottom: 10.0),
                             child: Text(
-                              DateFormat('EEEE').format(_dateTime), // Show the first day of the week
-                              style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
+                              DateFormat('EEEE').format(_dateTime),  // Show the first day of the week
+                              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                color: Colors.white,
+                                fontSize: 24,
+                                ),
                             ),
                           ),
                         ),
                         Container(
                           alignment: Alignment.bottomRight,
                           child: Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
+                            padding: const EdgeInsets.only(right: 15.0, bottom: 10.0),
                             child: Text(
                               DateFormat('d').format(_dateTime), // Show the second day of the week
-                              style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
+                              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                color: Colors.white,
+                                fontSize: 24,
+                                ),
                             ),
                           ),
                         ),
