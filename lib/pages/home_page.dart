@@ -87,7 +87,7 @@ class _DigitalClockState extends State<DigitalClock> {
                           child: Padding(
                             padding: const EdgeInsets.only(left: 15.0, bottom: 10.0),
                             child: Text(
-                              DateFormat('EEEE').format(_dateTime),  // Show the first day of the week
+                              DateFormat('EEE').format(_dateTime),  // Show the first day of the week
                               style: Theme.of(context).textTheme.titleMedium?.copyWith(
                                 color: Colors.white,
                                 fontSize: 24,
